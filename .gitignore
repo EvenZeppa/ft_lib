@@ -1,4 +1,8 @@
 # Object Files
 *.o
+
 # Subject Files
 *.subject.pdf
+
+# Archive Files
+*.a
