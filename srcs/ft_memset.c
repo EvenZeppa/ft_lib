@@ -6,13 +6,13 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:29:32 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/05 11:45:19 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/05 12:14:00 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	*memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
 	unsigned char	value;
