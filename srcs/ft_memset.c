@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:29:32 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/05 12:14:00 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/05 12:36:26 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	ptr = (unsigned char *)s;
 	value = (unsigned char)c;
 	i = 0;
+	if (!s)
+		return (NULL);
 	while (i < n)
 		ptr[i++] = value;
 	return (s);
