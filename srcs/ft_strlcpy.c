@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:20:38 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/05 12:56:40 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/05 20:22:39 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	while (i < size - 1)
+	while (i < size - 1 && dst[i])
 		dst[i] = src[i++];
 	dst[i] = '\0';
-	return (size - 1);
+	return ft_strlen(src);
 }
