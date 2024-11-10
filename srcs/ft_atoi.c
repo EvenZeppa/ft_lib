@@ -6,11 +6,11 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 21:28:23 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/05 21:33:52 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/10 22:23:15 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../libft.h"
 
 int	ft_atoi(const char *nptr)
 {

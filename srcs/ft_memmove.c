@@ -6,11 +6,11 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:12:41 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/05 12:37:56 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/10 22:23:15 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

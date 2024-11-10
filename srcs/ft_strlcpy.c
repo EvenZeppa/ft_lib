@@ -6,11 +6,11 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:20:38 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/05 20:57:37 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/10 22:23:15 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
