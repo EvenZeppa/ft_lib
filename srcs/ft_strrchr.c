@@ -6,21 +6,21 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:41:11 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/05 20:50:25 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/11 16:44:12 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-	int	match;
-	int	i;
+	char	*ptr;
 
-	match = -1;
-	i = -1;
-	while (s[++i])
-		if (s[i] == c)
-			match = i;
-	if (match == -1)
-		return (s[i]);
-	return (s[match]);
+	ptr = (char *)s;
+	while (*ptr++);
+	while (*ptr != c && ptr > s)
+		ptr--;
+	if (*ptr != c)
+		return (NULL);
+	return (ptr);
 }

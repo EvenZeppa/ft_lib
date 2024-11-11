@@ -12,7 +12,6 @@ SRCS =	${SRCS_DIR}ft_isalpha.c\
 		${SRCS_DIR}ft_memcpy.c\
 		${SRCS_DIR}ft_memmove.c\
 		${SRCS_DIR}ft_strlcpy.c\
-		${SRCS_DIR}ft_strlcat.c\
 		${SRCS_DIR}ft_toupper.c\
 		${SRCS_DIR}ft_tolower.c\
 		${SRCS_DIR}ft_strchr.c\
@@ -23,7 +22,8 @@ SRCS =	${SRCS_DIR}ft_isalpha.c\
 		${SRCS_DIR}ft_strnstr.c\
 		${SRCS_DIR}ft_atoi.c\
 		${SRCS_DIR}ft_calloc.c\
-		${SRCS_DIR}ft_strdup.c
+		${SRCS_DIR}ft_strdup.c\
+		${SRCS_DIR}ft_substr.c
 OBJS = $(SRCS:.c=.o)
 NAME = libft.a
 

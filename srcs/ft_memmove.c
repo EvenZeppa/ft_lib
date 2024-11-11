@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:12:41 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/10 22:23:15 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/10 22:24:49 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (NULL);
 	if (dest < src)
 	{
-		i = 0;
-		while (i < n)
-			ptr_dest[i] = ptr_src[i++];
+		i = -1;
+		while (++i < n)
+			ptr_dest[i] = ptr_src[i];
 		return (dest);
 	}
 	i = n;

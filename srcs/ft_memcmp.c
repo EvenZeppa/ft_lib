@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 21:09:50 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/10 22:23:15 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/11 16:45:08 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	ptr2 = (unsigned char *)s2;
 	while (n > 0)
 	{
-		if (ptr1 != ptr2)
+		if (*ptr1 != *ptr2)
 			return (*ptr1 - *ptr2);
 		ptr1++;
 		ptr2++;
