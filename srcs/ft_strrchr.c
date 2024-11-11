@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:41:11 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/11 17:06:56 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/11 17:59:07 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strrchr(const char *s, int c)
 	ptr = (char *)s;
 	while (*ptr)
 		ptr++;
-	while (*ptr != c && ptr > s)
+	while (*ptr != (unsigned char)c && ptr > s)
 		ptr--;
-	if (*ptr != c)
+	if (*ptr != (unsigned char)c)
 		return (NULL);
 	return (ptr);
 }

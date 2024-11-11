@@ -12,6 +12,7 @@ SRCS =	${SRCS_DIR}ft_isalpha.c\
 		${SRCS_DIR}ft_memcpy.c\
 		${SRCS_DIR}ft_memmove.c\
 		${SRCS_DIR}ft_strlcpy.c\
+		${SRCS_DIR}ft_strlcat.c\
 		${SRCS_DIR}ft_toupper.c\
 		${SRCS_DIR}ft_tolower.c\
 		${SRCS_DIR}ft_strchr.c\
