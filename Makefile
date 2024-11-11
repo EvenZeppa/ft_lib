@@ -23,7 +23,8 @@ SRCS =	${SRCS_DIR}ft_isalpha.c\
 		${SRCS_DIR}ft_atoi.c\
 		${SRCS_DIR}ft_calloc.c\
 		${SRCS_DIR}ft_strdup.c\
-		${SRCS_DIR}ft_substr.c
+		${SRCS_DIR}ft_substr.c\
+		${SRCS_DIR}ft_strjoin.c
 OBJS = $(SRCS:.c=.o)
 NAME = libft.a
 
