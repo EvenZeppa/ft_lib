@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:36:07 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/11 19:23:06 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/12 16:04:58 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	**ft_split(char const *s, char c)
 	int		nb_words;
 
 	nb_words = count_words(s, c);
-	strs = malloc(sizeof(char *) * nb_words + 1);
+	strs = (char **)malloc(sizeof(char *) * nb_words + 1);
 	if (!strs)
 		return (strs);
 	ptr_strs = strs;

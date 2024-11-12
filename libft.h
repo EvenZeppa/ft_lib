@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:07:52 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/11 20:32:23 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/12 15:32:47 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct	s_list
+{
+void			*content;
+struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

@@ -36,12 +36,17 @@ SRCS =	${SRCS_DIR}ft_isalpha.c\
 		${SRCS_DIR}ft_putstr_fd.c\
 		${SRCS_DIR}ft_putnbr_fd.c
 OBJS = $(SRCS:.c=.o)
+SRCS_BONUS =
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 NAME = libft.a
 
 all : ${NAME}
 
 ${NAME} : ${OBJS}
 	ar rcs ${NAME} ${OBJS}
+
+bonus : ${OBJS} ${OBJS_BONUS}
+	ar rcs ${NAME} ${OBJS} ${OBJS_BONUS}
 
 %.o : %.c
 	${CC} ${CFLAGS} -c $< -o $@
@@ -53,3 +58,5 @@ fclean : clean
 	rm -f ${NAME}
 
 re : fclean all
+
+
