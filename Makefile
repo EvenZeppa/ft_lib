@@ -36,7 +36,7 @@ SRCS =	${SRCS_DIR}ft_isalpha.c\
 		${SRCS_DIR}ft_putstr_fd.c\
 		${SRCS_DIR}ft_putnbr_fd.c
 OBJS = $(SRCS:.c=.o)
-SRCS_BONUS =
+SRCS_BONUS =	${SRCS_DIR}ft_lstnew_bonus.c
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 NAME = libft.a
 

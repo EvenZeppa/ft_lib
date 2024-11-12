@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:07:52 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/12 17:08:00 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/12 17:09:03 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+t_list	*ft_lstnew(void *content);
 
 #endif
