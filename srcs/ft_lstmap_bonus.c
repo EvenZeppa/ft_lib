@@ -6,13 +6,13 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:36:08 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/13 14:55:38 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/13 17:25:57 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_l;
 	t_list	*tmp_l;

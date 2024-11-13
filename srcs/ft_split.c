@@ -6,13 +6,13 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:36:07 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/12 16:04:58 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/13 17:24:57 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	len_word(const char *s, char c)
+size_t	len_word(const char *s, char c)
 {
 	int	i;
 
@@ -26,9 +26,9 @@ int	len_word(const char *s, char c)
 	return (i);
 }
 
-int	count_words(const char *s, char c)
+size_t	count_words(const char *s, char c)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (*s)
@@ -40,7 +40,8 @@ int	count_words(const char *s, char c)
 			s += len_word(s, c);
 			count++;
 		}
-		s++;
+		else
+			break ;
 	}
 	return (count);
 }
@@ -48,26 +49,22 @@ int	count_words(const char *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
-	char	**ptr_strs;
-	int		nb_words;
+	size_t	nb_words;
+	size_t	i;
 
 	nb_words = count_words(s, c);
-	strs = (char **)malloc(sizeof(char *) * nb_words + 1);
+	strs = (char **)malloc(sizeof(char *) * (nb_words + 1));
 	if (!strs)
-		return (strs);
-	ptr_strs = strs;
-	while (nb_words + 1 > 0)
+		return (NULL);
+	i = 0;
+	while (i < nb_words)
 	{
 		while (*s == c)
 			s++;
-		*strs = malloc(sizeof(char) * len_word(s, c) + 1);
-		if (!(*strs))
-			return (ptr_strs);
-		ft_strlcpy(*strs, s, len_word(s, c) + 1);
+		strs[i] = ft_substr(s, 0, len_word(s, c));
 		s += len_word(s, c);
-		strs++;
-		nb_words--;
+		i++;
 	}
-	*strs = NULL;
-	return (ptr_strs);
+	strs[i] = NULL;
+	return (strs);
 }

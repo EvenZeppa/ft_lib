@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 21:17:25 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/11 18:10:58 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/13 16:17:18 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	ptr_big = (char *)big;
 	big_len = ft_strlen(big);
 	little_len = ft_strlen(little);
-	if (!little || !big)
-		return (ptr_big);
+	if (!*little)
+		return ((char *)big);
 	while (len > 0 && big_len >= little_len && len >= little_len)
 	{
 		if (ft_memcmp(ptr_big, little, little_len) == 0)

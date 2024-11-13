@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:51:03 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/13 13:31:48 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/13 17:25:34 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *prev;
-	t_list *current;
+	t_list	*prev;
+	t_list	*current;
 
 	prev = *lst;
 	while (prev)

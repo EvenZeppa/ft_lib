@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:16:23 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/11 18:35:22 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/13 16:42:48 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,16 @@ char	*ft_strtrim(const char *s1, const char *set)
 	char	*ptr;
 	int		i;
 
-	while (ft_is_set(*s1, set))
+	while (*set && ft_is_set(*s1, set))
 		s1++;
 	i = 0;
 	while (s1[i])
 		i++;
-	while (ft_is_set(s1[i - 1], set))
+	while (*set && (i - 1) > 0 && ft_is_set(s1[i - 1], set))
 		i--;
-	ptr = malloc(sizeof(char) * i + 1);
+	ptr = malloc(sizeof(char) * (i + 1));
 	if (!ptr)
-		return (NULL);
+		return (ptr);
 	ft_strlcpy(ptr, s1, i + 1);
 	return (ptr);
 }
