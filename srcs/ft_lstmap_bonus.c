@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:36:08 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/13 17:25:57 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/13 17:53:22 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			return (ft_lstclear(&new_l, del), NULL);
 		tmp_l = ft_lstnew(tmp_content);
 		if (!tmp_l)
-			return (ft_lstclear(&new_l, del), NULL);
+			return (del(tmp_content), ft_lstclear(&new_l, del), NULL);
 		ft_lstadd_back(&new_l, tmp_l);
 		lst = lst->next;
 	}

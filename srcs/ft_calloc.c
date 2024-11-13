@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 21:37:24 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/10 22:23:15 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/13 17:49:19 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	int		total_size;
 
 	total_size = nmemb * size;
-	if (!nmemb && total_size / nmemb != size)
+	if (nmemb != 0 && total_size / nmemb != size)
 		return (NULL);
 	ptr = malloc(total_size);
 	if (!ptr)

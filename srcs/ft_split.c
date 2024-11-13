@@ -6,7 +6,7 @@
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:36:07 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/13 17:24:57 by ezeppa           ###   ########.fr       */
+/*   Updated: 2024/11/13 17:51:27 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,16 @@ size_t	count_words(const char *s, char c)
 	return (count);
 }
 
+void	free_all(char **strs, int i)
+{
+	while (i >= 0)
+	{
+		free(strs[i]);
+		i--;
+	}
+	free(strs);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
@@ -62,6 +72,8 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			s++;
 		strs[i] = ft_substr(s, 0, len_word(s, c));
+		if (!strs[i])
+			return (free_all(strs, i), NULL);
 		s += len_word(s, c);
 		i++;
 	}
