@@ -40,7 +40,9 @@ SRCS_BONUS =	${SRCS_DIR}ft_lstnew_bonus.c\
 				${SRCS_DIR}ft_lstadd_front_bonus.c\
 				${SRCS_DIR}ft_lstsize_bonus.c\
 				${SRCS_DIR}ft_lstlast_bonus.c\
-				${SRCS_DIR}ft_lstadd_back_bonus.c
+				${SRCS_DIR}ft_lstadd_back_bonus.c\
+				${SRCS_DIR}ft_lstdelone_bonus.c\
+				${SRCS_DIR}ft_lstclear_bonus.c
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 NAME = libft.a
 
