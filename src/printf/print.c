@@ -88,7 +88,7 @@ int	print_d_i(t_format *format, int nb)
 		res = formatted_number_precision(
 				res, -1, format->flag_plus, format->flag_space);
 		if (format->flag_zero && nb < 0
-			&& format->width > (int)ft_strlen(res) + 1)
+			&& format->width > (int)ft_strlen(res))
 		{
 			res = formatted_width_minus_zero(res, format->width,
 					format->flag_minus, format->flag_zero);
