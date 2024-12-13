@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 17:37:43 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/13 19:23:32 by ezeppa           ###   ########.fr       */
+/*   Created: 2024/11/05 10:07:52 by ezeppa            #+#    #+#             */
+/*   Updated: 2024/11/13 17:28:15 by ezeppa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	if (!new)
-		return ;
-	if (!ft_lstlast(*lst))
-		*lst = new;
-	else
-		ft_lstlast(*lst)->next = new;
-}
+# include "ft_lib_ctype.h"
+# include "ft_lib_string.h"
+# include "ft_lib_number.h"
+# include "ft_lib_conversion.h"
+# include "ft_lib_memory.h"
+# include "ft_lib_io.h"
+# include "ft_lib_printf.h"
+
+#endif

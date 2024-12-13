@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   long_size.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ezeppa <ezeppa@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 17:12:11 by ezeppa            #+#    #+#             */
-/*   Updated: 2024/11/13 19:23:32 by ezeppa           ###   ########.fr       */
+/*   Created: 2024/12/13 22:42:10 by marvin            #+#    #+#             */
+/*   Updated: 2024/12/13 22:42:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstadd_front(t_list **lst, t_list *new)
+long	long_size(long n)
 {
-	if (!new)
-		return ;
-	new->next = *lst;
-	*lst = new;
+	int	len;
+
+	len = 0;
+	if (n == -2147483648)
+		return (11);
+	if (n < 0)
+	{
+		n = -n;
+		len++;
+	}
+	if (n == 0)
+		return (1);
+	while (n > 0)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
 }
