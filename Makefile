@@ -12,6 +12,7 @@ SRC_CTYPE =	src/ctype/ft_isalnum.c\
 
 SRC_STRING =	src/string/ft_split.c\
 				src/string/ft_strchr.c\
+				src/string/ft_strnchr.c\
 				src/string/ft_strdup.c\
 				src/string/ft_striteri.c\
 				src/string/ft_strjoin.c\
