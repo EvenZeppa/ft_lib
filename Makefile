@@ -32,7 +32,8 @@ SRC_MEMORY =	src/memory/ft_bzero.c\
 				src/memory/ft_memcmp.c\
 				src/memory/ft_memcpy.c\
 				src/memory/ft_memmove.c\
-				src/memory/ft_memset.c
+				src/memory/ft_memset.c\
+				src/memory/ft_realloc.c
 
 SRC_NUMBER =	src/number/ft_long_size.c
 
